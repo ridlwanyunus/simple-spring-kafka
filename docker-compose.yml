@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  zookeeper:
+    image: ridlwan/simple-spring-kafka:latest
+    container_name: simple-spring-kafka
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      BOOTSTRAP_SERVER: localhost:9093
+    
